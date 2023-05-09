@@ -4,10 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-    <title>Document</title>
+    <title>testes java</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>SEJA BEM BINDO AO MEU CODIGO </h1>
     <canvas width="600" height="400"></canvas>
+
+    <script>
+        var P = document.querySelector('canvas');
+        var M = P.getContext('2d');
+        function bandeiraAlemanha()
+        {
+
+     M.fillStyle='black';
+     M.fillRect(0, 0, 600, 100);
+     M.fillStyle='red';
+     M.fillRect(0, 100, 600, 200);
+     M.fillStyle='yellow';
+     M.fillRect(0, 200, 600, 100);
+
+        }
+        function bandeiraBrasil()
+         {
+        M.fillStyle = 'green';
+        M.fillRect(0, 0, 600, 400,)
+
+        M.fillStyle='yellow';
+        M.beginPath();
+        M.moveTo(300, 50);
+        M.lineTo(50, 200);
+        M.lineTo(550, 200);
+        M.fill();
+
+        M.fillStyle='yellow';
+        M.beginPath();
+        M.moveTo(300, 350);
+        M.lineTo(50, 200);
+        M.lineTo(550, 200);
+        M.fill();
+
+        M.fillStyle="blue";
+        M.beginPath();
+        M.arc(300, 200, 100, 0, 2* Math.PI);
+        M.fill();
+     }
+        function openCodeA(){
+        setInterval(bandeiraAlemanha, 6000);
+     }
+        function openCodeB()
+        {
+        setInterval(bandeiraBrasil, 3000);
+        
+     } 
+        function gambiarra()
+        {
+            M.fillStyle='white';
+            M.beginPath();
+            M.fillRect(0, 0, 600, 400)
+        }
+        function openG(){
+        setInterval(gambiarra, 6000);
+        
+     } 
+openCodeB();
+openG();
+openCodeA();
+    </script>
 </body>
 </html>
