@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ola </h1>
+    <canvas width="600" height="400"></canvas>
+    <script>
+function L(x, y, raio, angulo, cor,) //construção do alvo 
+{
+    gref.fillStyle= cor ;
+    gref.beginPath();
+    gref.arc(x, y, raio, angulo, 2* Math.PI);
+    gref.fill();
+} 
+function alvo()// parametros do alvo
+{
+    L(x, y, raio+20, 0, 'red');
+    L(x, y, raio+10, 0, 'white');
+    L(x, y, raio, 0, 'red');
+}
+function sorteio(maximo)//logica para fica 
+{
+     return Math.floor(Math.random() * maximo);
+}
+    var frey = document.querySelector('canvas');
+    var gref = frey.getContext('2d');
+    var raio = 10;
+    var XA = sorteio(600);
+    var YA = sorteio(400);
+    gref.fillStyle="black";
+    gref.fillRect(0, 0, 600, 400)
+
+      
+      
+       
+        
+alvo(XA, YA)
+    </script>
+</body>
+</html>
